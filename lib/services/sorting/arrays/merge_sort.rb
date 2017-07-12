@@ -6,6 +6,14 @@ module Sorting
         new(input_array).execute
       end
 
+      def self.doc
+        '''
+          Merge sort is a reliable means of sorting an array with n log(n) time complexity.
+
+          The only downside is that it cannot sort in place, and it must create temporary arrays to perform the sorting.  As a result, it has relatively poor space complexity.
+        '''
+      end
+
       def execute
         merge_sort(input_array)
       end
