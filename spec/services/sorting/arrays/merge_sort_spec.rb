@@ -18,9 +18,7 @@ RSpec.describe Sorting::Arrays::MergeSort do
         let(:exptected_output) { [] }
 
         it "returns an empty array" do
-          it "returns an array of sorted elements" do
-            expect(described_class.execute(input_array)).to match_array(exptected_output)
-          end
+          expect(described_class.execute(input_array)).to match_array(exptected_output)
         end
       end
     end
