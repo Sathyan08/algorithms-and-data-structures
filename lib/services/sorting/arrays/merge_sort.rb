@@ -27,17 +27,17 @@ module Sorting
         front_half = array[0...midpoint]
         back_half = array[midpoint...array.length]
 
-        merge_sort(front_half)
-        merge_sort(back_half)
+        sorted_front_half = merge_sort(front_half)
+        sorted_back_half = merge_sort(back_half)
 
-        merge_halves(front_half, back_half)
+        merge_halves(sorted_front_half, sorted_back_half)
       end
 
       def merge_halves(front_half, back_half)
         output_array = []
 
         until front_half.empty? || back_half.empty?
-          if front_half.first > back_half.first
+          if front_half.first <= back_half.first
             output_array << front_half.shift
           else
             output_array << back_half.shift
